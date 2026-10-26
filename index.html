@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shaik Latheef — aspiring data analyst portfolio showcasing Python, SQL, Excel, Power BI, and data storytelling projects.">
+  <title>Shaik Latheef | Data Analyst Portfolio</title>
+  <style>
+    :root { --navy:#15365b; --blue:#1769aa; --pale:#eef5fb; --ink:#1e293b; --muted:#5f6f82; --line:#dce5ee; --white:#fff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter, "Segoe UI", Arial, sans-serif; color:var(--ink); background:#f7f9fc; line-height:1.6; }
+    a { color:var(--blue); text-decoration:none; }
+    .wrap { width:min(1100px, 91%); margin:auto; }
+    header { background:var(--white); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:5; }
+    nav { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:72px; }
+    .brand { color:var(--navy); font-weight:800; letter-spacing:.2px; }
+    .navlinks { display:flex; flex-wrap:wrap; gap:22px; font-size:.94rem; }
+    .navlinks a { color:#34465b; font-weight:600; }
+    .hero { background:linear-gradient(120deg,#fff 0%,#eef5fb 100%); padding:86px 0 78px; }
+    .eyebrow { color:var(--blue); text-transform:uppercase; letter-spacing:2px; font-size:.78rem; font-weight:800; }
+    h1 { font-size:clamp(2.5rem,6vw,4.6rem); line-height:1.06; letter-spacing:-2px; color:var(--navy); margin:15px 0; }
+    .hero p { max-width:720px; font-size:1.12rem; color:var(--muted); }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .btn { display:inline-block; border-radius:8px; padding:12px 18px; font-weight:700; border:1px solid var(--blue); }
+    .btn.primary { background:var(--blue); color:white; }
+    .btn.secondary { background:white; color:var(--blue); }
+    section { padding:66px 0; }
+    .section-head { margin-bottom:28px; }
+    h2 { color:var(--navy); font-size:clamp(1.7rem,3vw,2.35rem); margin:0 0 8px; letter-spacing:-.6px; }
+    .section-head p { color:var(--muted); margin:0; max-width:720px; }
+    .about-grid { display:grid; grid-template-columns:1.5fr 1fr; gap:24px; }
+    .card { background:white; border:1px solid var(--line); border-radius:14px; padding:24px; box-shadow:0 5px 20px rgba(24,55,88,.035); }
+    .card h3 { margin:0 0 10px; color:var(--navy); }
+    .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .stat { padding:17px; border-radius:10px; background:var(--pale); }
+    .stat strong { display:block; color:var(--navy); font-size:1.15rem; }
+    .stat span { color:var(--muted); font-size:.9rem; }
+    .skills { display:flex; flex-wrap:wrap; gap:10px; }
+    .pill { background:white; border:1px solid var(--line); border-radius:999px; padding:9px 14px; font-weight:650; color:#31465d; }
+    .projects { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .project { display:flex; flex-direction:column; min-height:300px; }
+    .project .number { color:var(--blue); font-size:.8rem; font-weight:800; letter-spacing:1.5px; }
+    .project p { color:var(--muted); flex:1; }
+    .tags { display:flex; flex-wrap:wrap; gap:7px; margin:10px 0 18px; }
+    .tag { background:var(--pale); color:#245781; padding:5px 8px; border-radius:5px; font-size:.78rem; font-weight:700; }
+    .note { border-left:4px solid var(--blue); padding:12px 16px; background:#eef5fb; color:#40546b; border-radius:0 8px 8px 0; margin-top:18px; }
+    .timeline { display:grid; gap:14px; }
+    .timeline-item { border-left:3px solid #b9d4eb; padding:2px 0 2px 18px; }
+    .timeline-item h3 { margin:0; color:var(--navy); }
+    .timeline-item p { margin:5px 0 0; color:var(--muted); }
+    .contact-box { background:var(--navy); color:white; border-radius:16px; padding:34px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .contact-box h2 { color:white; }
+    .contact-box p { color:#d8e5f2; max-width:600px; }
+    .contact-box .btn { background:white; color:var(--navy); border-color:white; white-space:nowrap; }
+    footer { padding:25px 0; color:var(--muted); font-size:.9rem; border-top:1px solid var(--line); background:white; }
+    @media (max-width:780px) {
+      .navlinks { gap:12px; font-size:.84rem; }
+      .about-grid, .projects { grid-template-columns:1fr; }
+      .hero { padding:60px 0; }
+      .contact-box { display:block; }
+      .contact-box .btn { margin-top:8px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#home">SL. / PORTFOLIO</a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="eyebrow">Aspiring Data Analyst · Business Intelligence</div>
+      <h1>Shaik Latheef</h1>
+      <p>I turn raw data into clear insights that help people understand performance, discover patterns, and make better decisions. I’m building practical skills in Python, SQL, Excel, and data visualization through hands-on analytics projects.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore My Projects</a>
+        <a class="btn secondary" href="#contact">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><h2>About Me</h2><p>Curious, analytical, and focused on solving real business problems with data.</p></div>
+      <div class="about-grid">
+        <div class="card">
+          <h3>My approach</h3>
+          <p>I am pursuing a B.Tech in Data Science and Artificial Intelligence at Siddharth Institute of Engineering and Technology. I’m interested in the complete analytics workflow: understanding a question, preparing reliable data, exploring patterns, building useful visualizations, and communicating practical recommendations.</p>
+          <p>I’m currently developing portfolio projects to demonstrate my skills in data preparation, exploratory analysis, dashboard design, and business storytelling.</p>
+        </div>
+        <div class="card">
+          <h3>At a glance</h3>
+          <div class="stats">
+            <div class="stat"><strong>Python & SQL</strong><span>Data preparation and querying</span></div>
+            <div class="stat"><strong>BI Tools</strong><span>Dashboards and reporting</span></div>
+            <div class="stat"><strong>Analytics</strong><span>Patterns and business insights</span></div>
+            <div class="stat"><strong>Learning by doing</strong><span>Project-based practice</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" style="background:#eef3f8">
+    <div class="wrap">
+      <div class="section-head"><h2>Skills & Tools</h2><p>Focused on the core skills highlighted in data analyst internship roles.</p></div>
+      <div class="skills">
+        <span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">SQL</span>
+        <span class="pill">Microsoft Excel</span><span class="pill">Power BI</span><span class="pill">Tableau</span>
+        <span class="pill">Data Cleaning</span><span class="pill">Exploratory Data Analysis</span><span class="pill">Data Visualization</span>
+        <span class="pill">Statistics</span><span class="pill">Business Intelligence</span><span class="pill">Reporting</span>
+        <span class="pill">Problem Solving</span><span class="pill">Communication</span>
+      </div>
+      <div class="note"><strong>Accuracy note:</strong> Keep only the tools you can confidently discuss in an interview. Add proficiency levels or certificates when you can verify them.</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head"><h2>Featured Projects</h2><p>Three project briefs designed to become evidence-based case studies. Replace the starter descriptions with your completed analysis, charts, and repository links.</p></div>
+      <div class="projects">
+        <article class="card project">
+          <div class="number">PROJECT 01</div>
+          <h3>Retail Sales Performance Dashboard</h3>
+          <p>Analyze transaction-level sales data to understand revenue, profit, product performance, and regional trends. Build an interactive dashboard for quick business decisions.</p>
+          <div class="tags"><span class="tag">Excel</span><span class="tag">SQL</span><span class="tag">Power BI</span></div>
+          <a href="#contact">Repository link to be added →</a>
+        </article>
+        <article class="card project">
+          <div class="number">PROJECT 02</div>
+          <h3>Customer Conversion & A/B Testing</h3>
+          <p>Compare two customer experiences using conversion metrics and statistical testing. Explain the results carefully, including uncertainty and practical significance.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Statistics</span></div>
+          <a href="#contact">Repository link to be added →</a>
+        </article>
+        <article class="card project">
+          <div class="number">PROJECT 03</div>
+          <h3>College Canteen Sales Insights</h3>
+          <p>Explore product demand, revenue patterns, and peak sales periods in a canteen dataset. Use the findings to propose data-informed inventory and sales improvements.</p>
+          <div class="tags"><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">Data Storytelling</span></div>
+          <a href="#contact">Add your existing work →</a>
+        </article>
+      </div>
+      <div class="note">These are portfolio project plans, not claims of completed work. Publish each project only after you have done the analysis and can explain the results.</div>
+    </div>
+  </section>
+
+  <section id="education" style="background:#eef3f8">
+    <div class="wrap">
+      <div class="section-head"><h2>Education & Development</h2><p>Academic foundation and continued learning.</p></div>
+      <div class="card timeline">
+        <div class="timeline-item">
+          <h3>B.Tech — Data Science & Artificial Intelligence</h3>
+          <p>Siddharth Institute of Engineering and Technology · 2023–2027</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Technical learning</h3>
+          <p>Building practical experience in data analytics, visualization, programming, and AI through coursework and project work.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Certifications</h3>
+          <p>Add verified certificates here with the exact course name, issuing organization, and completion date.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <div>
+          <h2>Let’s connect</h2>
+          <p>I’m interested in data analyst internships where I can contribute, learn from real datasets, and turn analysis into useful business insights.</p>
+          <p><strong>Email:</strong> Add your professional email · <strong>LinkedIn:</strong> Add your profile · <strong>GitHub:</strong> Add your profile</p>
+        </div>
+        <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub Profile</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© <span id="year"></span> Shaik Latheef · Data Analyst Portfolio</div></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
